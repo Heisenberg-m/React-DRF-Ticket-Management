@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  width: 100%;
+  background: #111;
+  color: #e8e8e8;
+  border-bottom: 1px solid #252525;
+  padding: 16px 32px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.first-row,
+.second-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.second-row {
+  margin-top: 16px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search input {
+  width: min(450px, 100%);
+  padding: 10px 16px;
+  background: #1b1b1b;
+  border: 1px solid #303030;
+  border-radius: 8px;
+  color: #f2f2f2;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.search input::placeholder {
+  color: #8c8c8c;
+}
+
+.search input:focus {
+  border-color: #555;
+  background: #202020;
+}
+
+.welcome {
+  color: #c0c0c0;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.stats {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.solve-stats,
+.pending-stats {
+  color: #c0c0c0;
+  font-size: 0.95rem;
+}
+
+.logout-btn button {
+  padding: 9px 20px;
+  background: #1f1f1f;
+  color: #f5f5f5;
+  border: 1px solid #393939;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.logout-btn button:hover {
+  background: #2a2a2a;
+  border-color: #555;
+}
+
+.logout-btn button:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 16px 24px;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .first-row,
+  .second-row {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 16px;
+  }
+
+  .first-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .logo,
+  .welcome {
+    text-align: center;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .search input {
+    max-width: none;
+  }
+
+  .second-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logout-btn button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 14px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .welcome,
+  .solve-stats,
+  .pending-stats {
+    font-size: 0.9rem;
+  }
+
+  .search input {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+
+  .logout-btn button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
