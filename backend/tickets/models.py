@@ -44,3 +44,20 @@ class Ticket(models.Model):
 
     def __str__(self):
         return f"[{self.id}] {self.title} - {self.status}"
+
+
+class TicketHistory(models.Model):
+    ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE, related_name='history')
+    changed_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+
+    field_changed = models.CharField(max_length=50)
+    old_value = models.CharField(max_length=255, blank=True, null=True)
+    new_value = models.CharField(max_length=255, blank=True, null=True)
+
+    changed_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-changed_at']
+
+    def __str__(self):
+        return f"Ticket #{self.ticket_id}: {self.field_changed} changed to {self.new_value}"

@@ -10,6 +10,7 @@ const Navbar = ({ onSearchChange }) => {
 
   const [stats, setStats] = useState({
     resolved_count: 0,
+    closed_count: 0,
     open_count: 0,
     in_progress_count: 0,
   });
@@ -43,6 +44,7 @@ const Navbar = ({ onSearchChange }) => {
   }
 
   const pending = (stats.open_count || 0) + (stats.in_progress_count || 0);
+  const solved = (stats.resolved_count || 0) + (stats.closed_count || 0);
 
   return (
     <div className="navbar-container">
@@ -60,7 +62,7 @@ const Navbar = ({ onSearchChange }) => {
       </div>
       <div className="second-row">
         <div className="stats">
-          <div className="solve-stats">Solved : {stats.resolved_count}</div>
+          <div className="solve-stats">Solved : {solved}</div>
           <div className="pending-stats">Pending : {pending}</div>
         </div>
 

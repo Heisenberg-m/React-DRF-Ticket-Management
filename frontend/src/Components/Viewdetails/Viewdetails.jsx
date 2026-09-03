@@ -22,6 +22,16 @@ const Viewdetails = () => {
   });
 
   const [engineers, setEngineers] = useState([]);
+  const [history, setHistory] = useState([]);
+
+  const fetchHistory = async () => {
+    try {
+      const historyRes = await api.get(`/tickets/${id}/history/`);
+      setHistory(historyRes.data);
+    } catch (err) {
+      console.warn("Failed to fetch history:", err);
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,7 +47,18 @@ const Viewdetails = () => {
     };
 
     fetchData();
+    fetchHistory();
   }, [id]);
+
+  const formatFieldName = (fieldName) => {
+    const labels = {
+      status: "Status",
+      priority: "Priority",
+      assigned_to: "Assigned To",
+      resolution_note: "Resolution Note",
+    };
+    return labels[fieldName] || fieldName;
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -51,7 +72,7 @@ const Viewdetails = () => {
     try {
       await api.put(`/tickets/${id}/`, ticketDetails);
       alert("Ticket updated successfully!");
-      navigate("/manager/dashboard");
+      // navigate("/manager/dashboard");
     } catch (err) {
       console.error("Failed to update ticket", err);
       alert("Failed to update the ticket. Please try again.");
@@ -65,6 +86,7 @@ const Viewdetails = () => {
         assigned_by: user.id,
       });
       setTicketDetails(res.data);
+      fetchHistory();
       alert("Ticket assigned to you!");
     } catch (err) {
       console.error("Failed to assign ticket", err);
@@ -185,6 +207,36 @@ const Viewdetails = () => {
           <button className="back-btn" onClick={() => navigate(-1)}>
             Back
           </button>
+        </div>
+
+        <div className="history-section">
+          <h3 className="history-title">History</h3>
+
+          {history.length === 0 ? (
+            <p className="no-history">No changes yet.</p>
+          ) : (
+            <ul className="history-list">
+              {history.map((entry) => (
+                <li key={entry.id} className="history-item">
+                  <span className="history-field">
+                    {formatFieldName(entry.field_changed)}
+                  </span>{" "}
+                  changed from{" "}
+                  <span className="history-value">
+                    {entry.old_value || "-----"}
+                  </span>{" "}
+                  to{" "}
+                  <span className="history-value">
+                    {entry.new_value || "-----"}
+                  </span>
+                  <div className="history-meta">
+                    by {entry.changed_by_name || "-----"} on{" "}
+                    {new Date(entry.changed_at).toLocaleString()}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </div>

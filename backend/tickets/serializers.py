@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Ticket, User
+from .models import Ticket, User, TicketHistory
 from django.contrib.auth.hashers import make_password
 
 class UserSerializer(serializers.ModelSerializer):
@@ -41,4 +41,15 @@ class TicketSerializer(serializers.ModelSerializer):
             'assigned_to', 'assigned_to_name', 
             'assigned_by', 'assigned_by_name', 
             'created_at', 'updated_at'
+        ]
+
+
+class TicketHistorySerializer(serializers.ModelSerializer):
+    changed_by_name = serializers.CharField(source='changed_by.username', read_only=True)
+
+    class Meta:
+        model = TicketHistory
+        fields = [
+            'id', 'field_changed', 'old_value', 'new_value',
+            'changed_by', 'changed_by_name', 'changed_at',
         ]

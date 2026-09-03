@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
+import LandingPage from "../Pages/LandingPage";
 import Login from "../Components/Registeruser/Login";
 import Register from "../Components/Registeruser/Register";
 
@@ -14,6 +15,8 @@ import ViewTicketDetails from "../Pages/ViewTicketDetails";
 const AppRoutes = () => {
   return (
     <Routes>
+      <Route path="/" element={<LandingPage />} />
+
       <Route path="/login" element={<Login />} />
 
       <Route path="/register" element={<Register />} />

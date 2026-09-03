@@ -2,8 +2,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
-from .models import Ticket, User
-from .serializers import TicketSerializer,UserSerializer, RegisterSerializer, UserListSerializer
+from .models import Ticket, User, TicketHistory
+from .serializers import TicketSerializer,UserSerializer, RegisterSerializer, UserListSerializer, TicketHistorySerializer
 from django.db import models
 from django.db.models import Count
 from django.shortcuts import get_object_or_404
@@ -54,11 +54,37 @@ class TicketDetailView(APIView):
 
     def put(self, request, pk):
         ticket = self.get_object(pk)
-        
+
+        old_values = {
+            'status': ticket.status,
+            'priority': ticket.priority,
+            'assigned_to': ticket.assigned_to.username if ticket.assigned_to else None,
+            'resolution_note': ticket.resolution_note,
+        }
+
         serializer = TicketSerializer(ticket, data=request.data, partial=True)
 
         if serializer.is_valid():
-            serializer.save()
+            updated_ticket = serializer.save()
+
+            new_values = {
+                'status': updated_ticket.status,
+                'priority': updated_ticket.priority,
+                'assigned_to': updated_ticket.assigned_to.username if updated_ticket.assigned_to else None,
+                'resolution_note': updated_ticket.resolution_note,
+            }
+
+            for field_name, old_value in old_values.items():
+                new_value = new_values[field_name]
+                if old_value != new_value:
+                    TicketHistory.objects.create(
+                        ticket=updated_ticket,
+                        changed_by=request.user,
+                        field_changed=field_name,
+                        old_value=old_value,
+                        new_value=new_value,
+                    )
+
             return Response(serializer.data)
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -73,6 +99,16 @@ class TicketDetailView(APIView):
         ticket = self.get_object(pk)
         ticket.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class TicketHistoryView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, pk):
+        ticket = get_object_or_404(Ticket, pk=pk)
+        history = ticket.history.all()
+        serializer = TicketHistorySerializer(history, many=True)
+        return Response(serializer.data)
 
 
 class RegisterView(APIView):
@@ -115,6 +151,7 @@ class TicketStatsView(APIView):
 
         stats = tickets.aggregate(
             total=Count('id'),
+            closed_count=Count('id',filter=models.Q(status='closed')),
             open_count=Count('id', filter=models.Q(status='open')),
             in_progress_count=Count('id', filter=models.Q(status='in_progress')),
             resolved_count=Count('id', filter=models.Q(status='resolved'))
