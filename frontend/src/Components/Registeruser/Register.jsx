@@ -28,65 +28,81 @@ const Register = () => {
       setSubmitting(false);
     }
   }
+
   return (
-    <div className="auth-container">
-      <form className="auth-form" onSubmit={handleSubmit}>
-        <h2 className="auth-title">Create account</h2>
+    <div className="auth-page">
+      <div className="auth-glow" />
 
-        <p
-          style={{
-            color: "#9f9f9f",
-            fontSize: "0.85rem",
-            margin: "-8px 0 0 0",
-          }}
-        >
-          Create an account by choosing your username, password, and role.
-        </p>
+      <header className="auth-topbar">
+        <Link to="/" className="auth-brand">
+          Ticket Manager
+        </Link>
+      </header>
 
-        <label className="auth-label">
-          Username
-          <input
-            className="auth-input"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </label>
+      <main className="auth-panel">
+        <div className="auth-hero">
+          <div className="auth-hero-badges">
+            <span className="auth-pill auth-status-open">open</span>
+            <span className="auth-pill auth-status-in_progress">
+              in progress
+            </span>
+            <span className="auth-pill auth-status-resolved">resolved</span>
+          </div>
 
-        <label className="auth-label">
-          Password
-          <input
-            className="auth-input"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
+          <h1 className="auth-hero-title">
+            Start tracking your team's tickets
+          </h1>
+          <p className="auth-hero-subtitle">
+            Create an account to log tickets, assign work, and follow it through
+            to resolution.
+          </p>
+        </div>
 
-        <label className="auth-label">
-          Role
-          <select
-            className="auth-input"
-            value={role}
-            onChange={(e) => setRole(e.target.value)}
-            required
-          >
-            <option value="engineer">Engineer</option>
+        <form className="auth-form" onSubmit={handleSubmit}>
+          <label className="auth-label">
+            Username
+            <input
+              className="auth-input"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </label>
 
-            <option value="manager">Manager</option>
-          </select>
-        </label>
-        {error && <p className="auth-error">{error}</p>}
+          <label className="auth-label">
+            Password
+            <input
+              className="auth-input"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </label>
 
-        <button className="auth-button" type="submit" disabled={submitting}>
-          {submitting ? "Creating account..." : "Create account"}
-        </button>
+          <label className="auth-label">
+            Role
+            <select
+              className="auth-input"
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              required
+            >
+              <option value="engineer">Engineer</option>
+              <option value="manager">Manager</option>
+            </select>
+          </label>
+          {error && <p className="auth-error">{error}</p>}
 
-        <p className="auth-footer">
-          Already have an account? <Link to="/login">Log in</Link>
-        </p>
-      </form>
+          <button className="auth-button" type="submit" disabled={submitting}>
+            {submitting ? "Creating account..." : "Create account"}
+          </button>
+
+          <p className="auth-footer">
+            Already have an account? <Link to="/login">Log in</Link>
+          </p>
+        </form>
+      </main>
     </div>
   );
 };

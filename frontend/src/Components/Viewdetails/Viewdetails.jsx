@@ -17,12 +17,17 @@ const Viewdetails = () => {
     created_at: "",
     updated_at: "",
     assigned_to: "",
+    assigned_to_name: "",
     assigned_by_name: "",
     resolution_note: "",
   });
 
   const [engineers, setEngineers] = useState([]);
   const [history, setHistory] = useState([]);
+
+  const isManager = user?.role === "manager";
+  const isEngineer = user?.role === "engineer";
+  const alreadyAssignedToSelf = ticketDetails.assigned_to === user?.id;
 
   const fetchHistory = async () => {
     try {
@@ -38,17 +43,23 @@ const Viewdetails = () => {
       try {
         const ticketRes = await api.get(`/tickets/${id}/`);
         setTicketDetails(ticketRes.data);
-
-        const usersRes = await api.get(`/users/`);
-        setEngineers(usersRes.data);
       } catch (err) {
-        console.warn("Failed to fetch data:", err);
+        console.warn("Failed to fetch ticket data:", err);
+      }
+
+      if (user?.role === "manager") {
+        try {
+          const usersRes = await api.get(`/users/`);
+          setEngineers(usersRes.data);
+        } catch (err) {
+          console.warn("Failed to fetch users list:", err);
+        }
       }
     };
 
     fetchData();
     fetchHistory();
-  }, [id]);
+  }, [id, user?.role]);
 
   const formatFieldName = (fieldName) => {
     const labels = {
@@ -72,7 +83,6 @@ const Viewdetails = () => {
     try {
       await api.put(`/tickets/${id}/`, ticketDetails);
       alert("Ticket updated successfully!");
-      // navigate("/manager/dashboard");
     } catch (err) {
       console.error("Failed to update ticket", err);
       alert("Failed to update the ticket. Please try again.");
@@ -81,11 +91,21 @@ const Viewdetails = () => {
 
   const handleAssignToSelf = async () => {
     try {
-      const res = await api.put(`/tickets/${id}/`, {
+      const payload = {
+        ...ticketDetails,
         assigned_to: user.id,
         assigned_by: user.id,
-      });
-      setTicketDetails(res.data);
+      };
+
+      const res = await api.put(`/tickets/${id}/`, payload);
+
+      setTicketDetails((prev) => ({
+        ...prev,
+        ...(res.data || {}),
+        assigned_to: user.id,
+        assigned_to_name: res.data?.assigned_to_name || user.username || "Me",
+      }));
+
       fetchHistory();
       alert("Ticket assigned to you!");
     } catch (err) {
@@ -96,9 +116,6 @@ const Viewdetails = () => {
 
   const createdDate = new Date(ticketDetails.created_at).toLocaleDateString();
   const updatedDate = new Date(ticketDetails.updated_at).toLocaleDateString();
-
-  const isEngineer = user?.role === "engineer";
-  const alreadyAssignedToSelf = ticketDetails.assigned_to === user?.id;
 
   return (
     <div className="main-container">
@@ -166,22 +183,31 @@ const Viewdetails = () => {
           </div>
 
           <div className="assigned_to">
-            <label className="assigned-label">
-              Assigned To:
-              <select
-                className="assigned-input"
-                name="assigned_to"
-                value={ticketDetails.assigned_to || ""}
-                onChange={handleChange}
-              >
-                <option value="">-- Unassigned --</option>
-                {engineers.map((engineer) => (
-                  <option key={engineer.id} value={engineer.id}>
-                    {engineer.username}
-                  </option>
-                ))}
-              </select>
-            </label>
+            {isManager ? (
+              <label className="assigned-label">
+                Assigned To:
+                <select
+                  className="assigned-input"
+                  name="assigned_to"
+                  value={ticketDetails.assigned_to || ""}
+                  onChange={handleChange}
+                >
+                  <option value="">-- Unassigned --</option>
+                  {engineers.map((engineer) => (
+                    <option key={engineer.id} value={engineer.id}>
+                      {engineer.username}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            ) : (
+              <div className="assigned-static">
+                Assigned to:{" "}
+                <strong>
+                  {ticketDetails.assigned_to_name || "Unassigned"}
+                </strong>
+              </div>
+            )}
           </div>
 
           {isEngineer && !alreadyAssignedToSelf && (
