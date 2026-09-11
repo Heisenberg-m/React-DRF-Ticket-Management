@@ -11,14 +11,13 @@ import Unauthorized from "../Pages/Unauthorized";
 import ProtectedRoute from "./ProtectedRoute";
 import RoleRoute from "./RoleRoute";
 import ViewTicketDetails from "../Pages/ViewTicketDetails";
+import CreateTicket from "../Pages/CreateTicket";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-
       <Route path="/login" element={<Login />} />
-
       <Route path="/register" element={<Register />} />
 
       <Route element={<ProtectedRoute />}>
@@ -29,6 +28,8 @@ const AppRoutes = () => {
         <Route element={<RoleRoute allowedRole="engineer" />}>
           <Route path="/engineer/dashboard" element={<EngineerDashboard />} />
         </Route>
+
+        <Route path="/tickets/new" element={<CreateTicket />} />
 
         <Route path="/viewdetails/:id" element={<ViewTicketDetails />} />
       </Route>

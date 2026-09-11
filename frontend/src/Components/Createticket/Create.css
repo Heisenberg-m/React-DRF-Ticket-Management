@@ -1,0 +1,151 @@
+.ct-page {
+  min-height: 100vh;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.ct-card {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #181818;
+  border: 1px solid #2b2b2b;
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.ct-heading {
+  color: #e8e8e8;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.ct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ct-label {
+  color: #9f9f9f;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ct-input,
+.ct-textarea,
+.ct-select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #2b2b2b;
+  background: #151515;
+  color: #e8e8e8;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.ct-textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.5;
+}
+
+.ct-select {
+  cursor: pointer;
+}
+
+.ct-input:focus,
+.ct-textarea:focus,
+.ct-select:focus {
+  outline: 2px solid #4169e1;
+  outline-offset: 1px;
+}
+
+.ct-input::placeholder,
+.ct-textarea::placeholder {
+  color: #6b6b6b;
+}
+
+.ct-error {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(180, 60, 60, 0.12);
+  border: 1px solid rgba(180, 60, 60, 0.3);
+  color: #d66;
+  font-size: 0.85rem;
+}
+
+.ct-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.ct-submit-btn {
+  flex: 1;
+  padding: 11px;
+  border-radius: 8px;
+  border: none;
+  background: #4169e1;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.ct-submit-btn:hover:not(:disabled) {
+  background: #3557c4;
+}
+
+.ct-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ct-cancel-btn {
+  flex: 1;
+  padding: 11px;
+  border-radius: 8px;
+  border: 1px solid #2b2b2b;
+  background: transparent;
+  color: #9f9f9f;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.ct-cancel-btn:hover {
+  border-color: #3a3a3a;
+  color: #e8e8e8;
+}
+
+@media (max-width: 480px) {
+  .ct-page {
+    padding: 24px 12px;
+  }
+
+  .ct-card {
+    padding: 20px;
+    gap: 14px;
+  }
+
+  .ct-heading {
+    font-size: 1.2rem;
+  }
+
+  .ct-actions {
+    flex-direction: column;
+  }
+}

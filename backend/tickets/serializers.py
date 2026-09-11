@@ -28,7 +28,6 @@ class RegisterSerializer(serializers.ModelSerializer):
         user.save()
         return user
 
-
 class TicketSerializer(serializers.ModelSerializer):
     assigned_to_name = serializers.CharField(source='assigned_to.username', read_only=True)
     assigned_by_name = serializers.CharField(source='assigned_by.username', read_only=True)
@@ -42,6 +41,9 @@ class TicketSerializer(serializers.ModelSerializer):
             'assigned_by', 'assigned_by_name', 
             'created_at', 'updated_at'
         ]
+        extra_kwargs = {
+            'category': {'required': False, 'default': 'general', 'allow_blank': True},
+        }
 
 
 class TicketHistorySerializer(serializers.ModelSerializer):

@@ -53,7 +53,7 @@ const Navbar = ({ onSearchChange }) => {
         <div className="search">
           <input
             type="text"
-            placeholder="🔍Search with ID"
+            placeholder="🔍 Search with ID"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
@@ -66,8 +66,17 @@ const Navbar = ({ onSearchChange }) => {
           <div className="pending-stats">Pending : {pending}</div>
         </div>
 
-        <div className="logout-btn">
-          <button onClick={handleLogout}>Logout</button>
+        {/* Action buttons grouped together */}
+        <div className="nav-actions">
+          <button
+            className="create-btn"
+            onClick={() => navigate("/tickets/new")}
+          >
+            + Create Ticket
+          </button>
+          <div className="logout-btn">
+            <button onClick={handleLogout}>Logout</button>
+          </div>
         </div>
       </div>
     </div>

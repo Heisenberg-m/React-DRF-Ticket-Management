@@ -77,6 +77,33 @@
   font-size: 0.95rem;
 }
 
+/* Action Container & Buttons */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.create-btn {
+  padding: 9px 20px;
+  background: #2563eb;
+  color: #ffffff;
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.create-btn:hover {
+  background: #1d4ed8;
+  border-color: #2563eb;
+}
+
+.create-btn:active {
+  transform: scale(0.97);
+}
+
 .logout-btn button {
   padding: 9px 20px;
   background: #1f1f1f;
@@ -147,6 +174,14 @@
     gap: 10px;
   }
 
+  .nav-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .create-btn,
+  .logout-btn,
   .logout-btn button {
     width: 100%;
   }
@@ -172,6 +207,7 @@
     padding: 10px 14px;
   }
 
+  .create-btn,
   .logout-btn button {
     font-size: 0.9rem;
     padding: 10px;
