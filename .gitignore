@@ -1,0 +1,18 @@
+# Database & Secrets
+*.sqlite3
+db.sqlite3
+.env
+.env.local
+
+# Python / Django
+__pycache__/
+*.pyc
+venv/
+env/
+staticfiles/
+
+# Node / React
+node_modules/
+dist/
+build/
+.DS_Store
