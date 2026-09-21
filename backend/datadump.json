@@ -1,0 +1,1168 @@
+[
+{
+  "model": "sessions.session",
+  "pk": "cyne7le679mahix76xiovur1rnvpe2cr",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHlDS7d-w1kmAGpGkhKuzL-uzbpQrf3nHNfLMK21riNvMSZ2JkJdvrdEuAjtx3QHdqtc-xtXebEd4UfdPBrp_y8HO7fQYVRv7WmLMh7gyAMeWeKzmSVNTAJldOEIViHxaGyWpigAYwk8BI9Widlcez9AeR-N7I:1wswnR:SIP-fwV5Vli8mkLBC9FPGb4UIXIeCIwNCFCVIrliFIg",
+    "expire_date": "2026-08-23T06:14:09.588Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "g0455x6un4zwh8wb3n5d1icjtyjd4ov5",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHlDS7d-w1kmAGpGkhKuzL-uzbpQrf3nHNfLMK21riNvMSZ2JkJdvrdEuAjtx3QHdqtc-xtXebEd4UfdPBrp_y8HO7fQYVRv7WmLMh7gyAMeWeKzmSVNTAJldOEIViHxaGyWpigAYwk8BI9Widlcez9AeR-N7I:1wrb14:BPm0zou2qP1prIvL0IrV1CLxNm3aQSx23Wp_aI0ZQvQ",
+    "expire_date": "2026-08-19T12:46:38.671Z"
+  }
+},
+{
+  "model": "tickets.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$v5HxPo4ohOooxBCTktlqUk$LU1eMVWstj9VhtlbkRgOkzW95JhaZ27g69xnyduEqoI=",
+    "last_login": "2026-08-09T06:14:09.582Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-08-05T12:45:41.461Z",
+    "role": "engineer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tickets.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$r8kN58ceoo0Kpy7BCIg3eG$xzjyMmrh2vn4Onh3P8hfamYxTMrhdzrv3cs5HyX80wU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "manand",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-09T02:36:34.493Z",
+    "role": "manager",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tickets.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$GcJ7ju4o04Jn0ihMhzsKlp$cme/yo6NXLo1B9PtDgR/eJouQ6pGAudWWuxIA4YxaBM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "engineer1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-12T11:00:06.961Z",
+    "role": "engineer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tickets.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$M2XSt7stxGGL1tVL6oV7MJ$OxuI4ywNEmzTEsHyT+8WwJrGZrp72HjEOqjkgPAIv9A=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "engineer2",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-12T11:01:32.850Z",
+    "role": "engineer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tickets.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$2wxxkq5pOf25g10fGWHczz$jhQTs8gFGvJ+p8/yQeGxynHNsQ9fa2wrujI186gcPXU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "engineer3",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-12T11:02:12.048Z",
+    "role": "engineer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tickets.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$2WJHB65m7C5A43y5cEBxjs$XAn3OxfTccTSd2Vgykvp91439JyTFyA56UN0llPf+Q0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "engineer4",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-12T11:02:34.255Z",
+    "role": "engineer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tickets.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$XhMJNVW5DlD8jVldeCRdTt$qsnv5PKYLJiWKQJvhbt/j7UdaJCw9JVnIajc9EjZPSI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Mridul",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-01T14:37:55.648Z",
+    "role": "engineer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 3,
+  "fields": {
+    "title": "Data fetching error",
+    "description": "Data fetching error Description updated",
+    "category": "Data fetching",
+    "status": "open",
+    "priority": "high",
+    "assigned_to": [
+      "Mridul"
+    ],
+    "assigned_by": [
+      "Mridul"
+    ],
+    "resolution_note": "",
+    "created_at": "2026-08-09T02:47:19.353Z",
+    "updated_at": "2026-09-03T15:25:29.295Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 4,
+  "fields": {
+    "title": "Multiple errors",
+    "description": "Multiple error description",
+    "category": "Some category",
+    "status": "in_progress",
+    "priority": "low",
+    "assigned_to": [
+      "Mridul"
+    ],
+    "assigned_by": [
+      "Mridul"
+    ],
+    "resolution_note": "",
+    "created_at": "2026-08-09T02:48:31.852Z",
+    "updated_at": "2026-09-03T12:24:57.162Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 5,
+  "fields": {
+    "title": "Server error",
+    "description": "Server error description",
+    "category": "Category as required",
+    "status": "open",
+    "priority": "high",
+    "assigned_to": [
+      "Mridul"
+    ],
+    "assigned_by": null,
+    "resolution_note": "",
+    "created_at": "2026-08-09T02:49:46.164Z",
+    "updated_at": "2026-09-03T02:37:23.043Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 6,
+  "fields": {
+    "title": "Page reloading",
+    "description": "Page reloading fails when user tries to refresh the page",
+    "category": "Server error",
+    "status": "closed",
+    "priority": "medium",
+    "assigned_to": [
+      "Mridul"
+    ],
+    "assigned_by": [
+      "Mridul"
+    ],
+    "resolution_note": "",
+    "created_at": "2026-08-09T06:15:25.285Z",
+    "updated_at": "2026-09-03T12:37:34.868Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 7,
+  "fields": {
+    "title": "Call back error",
+    "description": "Call back error description for the ticket",
+    "category": "Server error",
+    "status": "closed",
+    "priority": "medium",
+    "assigned_to": null,
+    "assigned_by": null,
+    "resolution_note": "",
+    "created_at": "2026-08-09T06:15:57.584Z",
+    "updated_at": "2026-08-09T06:15:57.584Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 8,
+  "fields": {
+    "title": "Sample ticket 1",
+    "description": "Sample ticket 1 desc",
+    "category": "Sample",
+    "status": "in_progress",
+    "priority": "low",
+    "assigned_to": null,
+    "assigned_by": null,
+    "resolution_note": "",
+    "created_at": "2026-08-09T06:16:34.142Z",
+    "updated_at": "2026-08-09T06:16:34.142Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 9,
+  "fields": {
+    "title": "Sample ticket 2",
+    "description": "Desc for sample ticket 2",
+    "category": "Sample",
+    "status": "in_progress",
+    "priority": "high",
+    "assigned_to": null,
+    "assigned_by": null,
+    "resolution_note": "",
+    "created_at": "2026-08-09T06:17:03.833Z",
+    "updated_at": "2026-08-09T06:17:03.833Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 10,
+  "fields": {
+    "title": "Failed message",
+    "description": "Page fails to load the message",
+    "category": "Backend",
+    "status": "resolved",
+    "priority": "low",
+    "assigned_to": null,
+    "assigned_by": null,
+    "resolution_note": "",
+    "created_at": "2026-08-09T06:17:55.260Z",
+    "updated_at": "2026-08-09T06:17:55.260Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 11,
+  "fields": {
+    "title": "Auth error",
+    "description": "Auth error description This package simply re-exports everything from react-router to smooth the upgrade path for v6 applications. Once upgraded you can change all of your imports and remove it from your dependencies:",
+    "category": "Auth",
+    "status": "resolved",
+    "priority": "high",
+    "assigned_to": null,
+    "assigned_by": null,
+    "resolution_note": "",
+    "created_at": "2026-08-09T06:36:20.988Z",
+    "updated_at": "2026-08-09T06:36:20.988Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 12,
+  "fields": {
+    "title": "Ref error for the user",
+    "description": "This package simply re-exports everything from react-router to smooth the upgrade path for v6 applications. Once upgraded you can change all of your imports and remove it from your dependencies:",
+    "category": "Ref",
+    "status": "open",
+    "priority": "low",
+    "assigned_to": null,
+    "assigned_by": null,
+    "resolution_note": "",
+    "created_at": "2026-08-09T06:36:45.616Z",
+    "updated_at": "2026-08-09T06:36:45.616Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 13,
+  "fields": {
+    "title": "Res 1 error for the admin",
+    "description": "This package simply re-exports everything from react-router to smooth the upgrade path for v6 applications. Once upgraded you can change all of your imports and remove it from your dependencies:",
+    "category": "Res 2 desc",
+    "status": "in_progress",
+    "priority": "high",
+    "assigned_to": null,
+    "assigned_by": null,
+    "resolution_note": "",
+    "created_at": "2026-08-09T06:37:18.872Z",
+    "updated_at": "2026-08-09T06:37:18.872Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 14,
+  "fields": {
+    "title": "Test Ticket 5",
+    "description": "descrption for test ticket",
+    "category": "Random categoty",
+    "status": "open",
+    "priority": "high",
+    "assigned_to": null,
+    "assigned_by": [
+      "manand"
+    ],
+    "resolution_note": null,
+    "created_at": "2026-08-09T07:59:18.033Z",
+    "updated_at": "2026-08-09T07:59:18.033Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 15,
+  "fields": {
+    "title": "Test Ticket 6",
+    "description": "descrption for test ticket",
+    "category": "categoty",
+    "status": "open",
+    "priority": "medium",
+    "assigned_to": null,
+    "assigned_by": [
+      "manand"
+    ],
+    "resolution_note": null,
+    "created_at": "2026-08-09T07:59:44.664Z",
+    "updated_at": "2026-08-09T07:59:44.664Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 16,
+  "fields": {
+    "title": "Test Ticket 7",
+    "description": "descrption for test ticket",
+    "category": "categoty",
+    "status": "closed",
+    "priority": "low",
+    "assigned_to": null,
+    "assigned_by": [
+      "manand"
+    ],
+    "resolution_note": null,
+    "created_at": "2026-08-09T08:00:58.113Z",
+    "updated_at": "2026-08-09T08:00:58.113Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 17,
+  "fields": {
+    "title": "Test Ticket 8",
+    "description": "descrption for test ticket",
+    "category": "categoty",
+    "status": "closed",
+    "priority": "high",
+    "assigned_to": null,
+    "assigned_by": [
+      "manand"
+    ],
+    "resolution_note": null,
+    "created_at": "2026-08-09T08:01:17.527Z",
+    "updated_at": "2026-08-09T08:01:17.527Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 18,
+  "fields": {
+    "title": "Deployment issue after connecting to the Server",
+    "description": "A long description for the issue.",
+    "category": "Deployement",
+    "status": "open",
+    "priority": "medium",
+    "assigned_to": null,
+    "assigned_by": null,
+    "resolution_note": "",
+    "created_at": "2026-08-11T03:07:38.010Z",
+    "updated_at": "2026-08-11T03:07:38.010Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 19,
+  "fields": {
+    "title": "Random title for the issue",
+    "description": "Random description for the issue we are facing here on the end",
+    "category": "Category",
+    "status": "open",
+    "priority": "medium",
+    "assigned_to": null,
+    "assigned_by": null,
+    "resolution_note": "",
+    "created_at": "2026-08-11T03:08:36.775Z",
+    "updated_at": "2026-08-11T03:08:36.775Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 20,
+  "fields": {
+    "title": "Title 20",
+    "description": "Description for title 20",
+    "category": "Some category",
+    "status": "open",
+    "priority": "high",
+    "assigned_to": null,
+    "assigned_by": null,
+    "resolution_note": "",
+    "created_at": "2026-08-11T03:09:28.766Z",
+    "updated_at": "2026-08-11T03:09:28.766Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 21,
+  "fields": {
+    "title": "Title 21 extending the title for the issue title 20",
+    "description": "Description for the same issue, as mentioned in the title.",
+    "category": "Doesn't matter",
+    "status": "in_progress",
+    "priority": "low",
+    "assigned_to": null,
+    "assigned_by": null,
+    "resolution_note": "",
+    "created_at": "2026-08-11T03:11:01.941Z",
+    "updated_at": "2026-08-11T03:11:01.942Z"
+  }
+},
+{
+  "model": "tickets.ticket",
+  "pk": 22,
+  "fields": {
+    "title": "Sample title for the ticket for testing",
+    "description": "Sample description for the ticket for testing. Sample description for the ticket for testing. Sample description for the ticket for testing",
+    "category": "general",
+    "status": "open",
+    "priority": "high",
+    "assigned_to": [
+      "Mridul"
+    ],
+    "assigned_by": [
+      "manand"
+    ],
+    "resolution_note": null,
+    "created_at": "2026-09-11T10:19:04.954Z",
+    "updated_at": "2026-09-11T10:19:35.603Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 1,
+  "fields": {
+    "ticket": 5,
+    "changed_by": [
+      "manand"
+    ],
+    "field_changed": "assigned_to",
+    "old_value": "engineer1",
+    "new_value": "Mridul",
+    "changed_at": "2026-09-03T02:36:07.780Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 2,
+  "fields": {
+    "ticket": 5,
+    "changed_by": [
+      "manand"
+    ],
+    "field_changed": "priority",
+    "old_value": "high",
+    "new_value": "medium",
+    "changed_at": "2026-09-03T02:36:38.368Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 3,
+  "fields": {
+    "ticket": 5,
+    "changed_by": [
+      "manand"
+    ],
+    "field_changed": "priority",
+    "old_value": "medium",
+    "new_value": "high",
+    "changed_at": "2026-09-03T02:37:23.053Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 4,
+  "fields": {
+    "ticket": 3,
+    "changed_by": [
+      "Mridul"
+    ],
+    "field_changed": "assigned_to",
+    "old_value": null,
+    "new_value": "Mridul",
+    "changed_at": "2026-09-03T11:44:05.710Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 5,
+  "fields": {
+    "ticket": 4,
+    "changed_by": [
+      "Mridul"
+    ],
+    "field_changed": "priority",
+    "old_value": "low",
+    "new_value": "high",
+    "changed_at": "2026-09-03T11:45:32.861Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 6,
+  "fields": {
+    "ticket": 4,
+    "changed_by": [
+      "Mridul"
+    ],
+    "field_changed": "priority",
+    "old_value": "high",
+    "new_value": "low",
+    "changed_at": "2026-09-03T11:45:40.762Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 7,
+  "fields": {
+    "ticket": 4,
+    "changed_by": [
+      "Mridul"
+    ],
+    "field_changed": "assigned_to",
+    "old_value": null,
+    "new_value": "Mridul",
+    "changed_at": "2026-09-03T12:24:57.172Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 8,
+  "fields": {
+    "ticket": 6,
+    "changed_by": [
+      "Mridul"
+    ],
+    "field_changed": "assigned_to",
+    "old_value": null,
+    "new_value": "Mridul",
+    "changed_at": "2026-09-03T12:37:34.880Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 9,
+  "fields": {
+    "ticket": 3,
+    "changed_by": [
+      "manand"
+    ],
+    "field_changed": "priority",
+    "old_value": "high",
+    "new_value": "medium",
+    "changed_at": "2026-09-03T15:18:21.153Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 10,
+  "fields": {
+    "ticket": 3,
+    "changed_by": [
+      "manand"
+    ],
+    "field_changed": "priority",
+    "old_value": "medium",
+    "new_value": "high",
+    "changed_at": "2026-09-03T15:19:13.336Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 11,
+  "fields": {
+    "ticket": 3,
+    "changed_by": [
+      "manand"
+    ],
+    "field_changed": "priority",
+    "old_value": "high",
+    "new_value": "low",
+    "changed_at": "2026-09-03T15:19:46.093Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 12,
+  "fields": {
+    "ticket": 3,
+    "changed_by": [
+      "manand"
+    ],
+    "field_changed": "assigned_to",
+    "old_value": "Mridul",
+    "new_value": "engineer1",
+    "changed_at": "2026-09-03T15:19:46.099Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 13,
+  "fields": {
+    "ticket": 3,
+    "changed_by": [
+      "manand"
+    ],
+    "field_changed": "priority",
+    "old_value": "low",
+    "new_value": "high",
+    "changed_at": "2026-09-03T15:20:09.828Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 14,
+  "fields": {
+    "ticket": 3,
+    "changed_by": [
+      "manand"
+    ],
+    "field_changed": "assigned_to",
+    "old_value": "engineer1",
+    "new_value": "Mridul",
+    "changed_at": "2026-09-03T15:20:09.834Z"
+  }
+},
+{
+  "model": "tickets.tickethistory",
+  "pk": 15,
+  "fields": {
+    "ticket": 22,
+    "changed_by": [
+      "manand"
+    ],
+    "field_changed": "assigned_to",
+    "old_value": "manand",
+    "new_value": "Mridul",
+    "changed_at": "2026-09-11T10:19:35.614Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-08-05T12:48:36.670Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "mkatyayan (engineer)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-08-05T12:50:15.377Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "1",
+    "object_repr": "[1] Login Issue - open",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-08-05T12:51:16.420Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "2",
+    "object_repr": "[2] Create account issue - open",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-08-05T12:58:02.521Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "mkatyayan1 (engineer)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-08-05T13:07:32.180Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "mkatyayan (manager)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-08-05T13:07:39.950Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "mkatyayan (manager)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-08-06T11:47:59.131Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "mkatyayan (manager)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-08-06T11:47:59.132Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "mkatyayan1 (engineer)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-08-06T11:48:18.435Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "2",
+    "object_repr": "[2] Create account issue - open",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-08-06T11:48:18.435Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "1",
+    "object_repr": "[1] Login Issue - in_progress",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-08-09T02:47:19.355Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "3",
+    "object_repr": "[3] Data fetching error - open",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-08-09T02:48:31.856Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "4",
+    "object_repr": "[4] Multiple errors - in_progress",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-08-09T02:49:46.168Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "5",
+    "object_repr": "[5] Server error - resolved",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-08-09T06:15:25.287Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "6",
+    "object_repr": "[6] Page reloading - closed",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-08-09T06:15:57.586Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "7",
+    "object_repr": "[7] Call back error - closed",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-08-09T06:16:34.144Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "8",
+    "object_repr": "[8] Sample ticket 1 - in_progress",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-08-09T06:17:03.835Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "9",
+    "object_repr": "[9] Sample ticket 2 - in_progress",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-08-09T06:17:55.262Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "10",
+    "object_repr": "[10] Failed message - resolved",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-08-09T06:36:20.994Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "11",
+    "object_repr": "[11] Auth error - resolved",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-08-09T06:36:45.621Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "12",
+    "object_repr": "[12] Ref error for the user - open",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-08-09T06:37:18.877Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "13",
+    "object_repr": "[13] Res 1 error for the admin - in_progress",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-08-11T03:07:38.016Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "18",
+    "object_repr": "[18] Deployment issue after connecting to the Server - open",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-08-11T03:08:36.780Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "19",
+    "object_repr": "[19] Random title for the issue - open",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-08-11T03:09:28.770Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "20",
+    "object_repr": "[20] Title 20 - open",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-08-11T03:11:01.948Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "ticket"
+    ],
+    "object_id": "21",
+    "object_repr": "[21] Title 21 extending the title for the issue title 20 - in_progress",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-08-12T10:59:46.357Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tickets",
+      "user"
+    ],
+    "object_id": "5",
+    "object_repr": "engineer1 (engineer)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+}
+]
